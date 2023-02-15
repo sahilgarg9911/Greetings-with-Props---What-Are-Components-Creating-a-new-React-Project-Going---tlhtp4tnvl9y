@@ -1,0 +1,78 @@
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.note {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 10px;
+    border-radius: 30px;
+    border-color: #eee;
+    background-color: yellow;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.note h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.note p {
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+.note button {
+    border: none;
+    cursor: pointer;
+}
+
+.note button:hover {
+    background-color: black;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.addinputs {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.savebtn {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.savebtn:hover {
+    background-color: #005ea2;
+}
+
+.noteskeep {
+    box-shadow: 30px;
+    border-radius: 20px;
+}

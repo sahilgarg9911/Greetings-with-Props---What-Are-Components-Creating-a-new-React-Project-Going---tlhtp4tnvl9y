@@ -1,13 +1,18 @@
-import React from "react";
-import '../styles/App.css';
-import Welcome from './Welcome';
+import React, { useState } from "react";
+import Navbar from "./Navbar";
+import NoteKeeper from "./NoteKeeper";
+import "../styles/App.css";
 
-const App = () => {
+function App() {
+
   return (
-    <Welcome name="sahil garg" />
-  
-  )
+    <>
+      <Navbar />
+      <div className="container">
+        <NoteKeeper />
+      </div>
+    </>
+  );
 }
-
 
 export default App;

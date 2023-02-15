@@ -1,0 +1,76 @@
+.note {
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 288px;
+    height: auto;
+    min-height: 160px;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.actions {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+}
+
+.edit,
+.delete {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.edit:hover,
+.delete:hover,
+.save:hover {
+    background-color: #000000;
+    border-radius: 10%;
+    color: white;
+}
+
+.delete .material-icons {
+    color: #f44336;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+h4 {
+    margin: 0;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    color: #5f6368;
+}
+
+p {
+    margin: 0;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: red;
+    width: 310px;
+    border: 1px solid;
+}
+
+.notediv {
+    border: 1px solid;
+}
