@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Pagination from './Pagination';
 import "../styles/NoteKeeper.css";
 
 function NoteKeeper() {
@@ -7,7 +6,7 @@ function NoteKeeper() {
   const [tagline, setTagline] = useState('');
   const [description, setDescription] = useState('');
   const [notes, setNotes] = useState([]);
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   
 
   const handleSubmit = (e) => {
@@ -44,12 +43,18 @@ function NoteKeeper() {
     setCurrentPage(newPage);
   };
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(6);
-  const indexOfLastNote = currentPage * postPerPage;
-  const indexOfFirstNote = indexOfLastNote - postPerPage;
-  const currentNotes = notes.slice(indexOfFirstNote, indexOfLastNote);
+  
+  const [posts,setPosts]=useState([]);
+  const [loading,setLoading]=useState(false);
+  const [currentPage,setCurrentPage]=useState(currentPage); 
+  const [postsPerPage,setPostPerPage]=useState(3);
 
+  const indexOfLastPost= currentPage*postsPerPage;
+  const indexOfFirstPost= indexOfLastPost-postsPerPage;
+  const currentPosts=posts.slice(indexOfFirstPost,indexOfLastPost);
+
+
+  const paginate=(pagenumber)=>setCurrentPage(pagenumber)
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -71,12 +76,7 @@ function NoteKeeper() {
           </div>
         ))}
       </div>
-      <Pagination
-                totalPosts={count}
-                postsPerPage={postPerPage}
-                setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
-            />
+
  
     </div>
   );
