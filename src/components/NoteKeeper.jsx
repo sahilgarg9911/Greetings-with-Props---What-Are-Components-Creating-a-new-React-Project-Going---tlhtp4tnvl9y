@@ -39,22 +39,7 @@ function NoteKeeper() {
     setNotes(updatedNotes);
   };
 
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
 
-  
-  const [posts,setPosts]=useState([]);
-  const [loading,setLoading]=useState(false);
-  const [currentPage,setCurrentPage]=useState(currentPage); 
-  const [postsPerPage,setPostPerPage]=useState(3);
-
-  const indexOfLastPost= currentPage*postsPerPage;
-  const indexOfFirstPost= indexOfLastPost-postsPerPage;
-  const currentPosts=posts.slice(indexOfFirstPost,indexOfLastPost);
-
-
-  const paginate=(pagenumber)=>setCurrentPage(pagenumber)
   return (
     <div>
       <form onSubmit={handleSubmit}>
